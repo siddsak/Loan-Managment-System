@@ -20,8 +20,8 @@
     </script>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <!-- font-awesome icons -->
     <link href="css/fontawesome-all.min.css" rel="stylesheet" />
     <!-- //Custom Theme files -->
@@ -64,19 +64,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-center ml-lg-auto">
               <li class="nav-item mr-3">
-                <a class="nav-link" href="index.html"
+                <a class="nav-link" href="/index.html"
                   >Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item mr-3">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="/about.html">About</a>
               </li>
               <li class="nav-item mr-3">
-                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="/services.html">Services</a>
               </li>
               <li class="nav-item mr-3">
-                <a class="nav-link" href="loan_calculator.html"
+                <a class="nav-link" href="/loan_calculator.html"
                   >Loan Calculator</a
                 >
               </li>
@@ -85,8 +85,9 @@
                   >Paid Services</a
                 >
               </li>
+
               <li class="nav-item active">
-                <a class="nav-link" href="contact.html">contact</a>
+                <a class="nav-link" href="/contact.html">contact</a>
               </li>
             </ul>
           </div>
@@ -118,21 +119,18 @@
             <h6>Please fill this form to contact with us.</h6>
             <div class="contact_left_grid">
               <form
-                onsubmit="sendEmail(); reset(); return false;"
                 action="https://formspree.io/f/maykpjab"
                 method="POST"
                 id="my-form"
-                enctype="multipart/form-data"
               >
-                <input type="text" name="Name" id="Name" placeholder="Name" required="" />
-                <input type="email" name="Email" id="email" placeholder="Email" required
-                /> <input type="tel" name="Phone" id="Phone" placeholder="Phone Number"
-                required= /> <input type="text" name="Payment_ID"
-                placeholder="Payment ID" />
+                <input type="text" name="Name" placeholder="Name" required="" />
+                <input type="email" name="Email" placeholder="Email" required=
+                /> <input type="tel" name="Phone" placeholder="Phone Number"
+                required= />
+                <input type="text" name="Payment_ID" placeholder="Payment ID" />
                 <input
                   type="text"
                   name="Subject"
-                  id="Subject"
                   placeholder="Subject"
                   required=""
                 />
@@ -143,8 +141,7 @@
                   required=""
                   placeholder="Message"
                 ></textarea>
-                <!-- <input type="file" name="upload" required="" /> -->
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Submit" />
                 <input type="reset" value="Clear" />
                 <div class="clearfix"></div>
               </form>
@@ -186,7 +183,7 @@
                 <li class="hd">Phone:+91 98216 27720</li>
                 <li class="hd">
                   Email:
-                  <a href="">finwinent@gmail.com</a>
+                  <a href="">finwin@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -229,7 +226,7 @@
           </ul>
         </div>
         <div class="copyrightbottom">
-          <p>© 2023 Finwin Enterprises. All Rights Reserved</p>
+          <p>© 2022 Finwin Enterprises. All Rights Reserved</p>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -239,14 +236,14 @@
     <script>
       function sendEmail() {
         Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "siddsakpal2004@gmail.com",
-          Password: "26EFCA1912E4CB60CE4D0DE934AFD27873E5",
-          To: "pd15042002@gmail.com",
+          Host: "smtp.gmail.com",
+          Username: "siddsakpal20042gmail.com",
+          Password: "Sidya@2004s",
+          To: "sakpalsidd2004@gmail.com",
           From: document.getElementById("email").value,
           Subject: "This is the subject",
-          Body: "Email: "+document.getElementById("email").value+"<br>Name: "+document.getElementById("Name").value+"<br> Subject:- "+document.getElementById("Subject").value+"<br>Phone:- "+document.getElementById("Phone").value,
-        }).then((message));
+          Body: "And this is the body",
+        }).then((message) => alert(message));
       }
     </script>
     <!-- //Modal -->
